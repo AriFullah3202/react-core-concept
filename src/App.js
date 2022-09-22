@@ -31,9 +31,12 @@ function ExternalUsers() {
       {
         console.log(users.length)
       }
-      {
-        users.map(user => <User name={user.name} email={user.email}></User>)
-      }
+      <div className="user">
+
+        {
+          users.map(user => <User name={user.name} email={user.email}></User>)
+        }
+      </div>
     </div>
   )
 }
@@ -41,7 +44,7 @@ function ExternalUsers() {
 function User(props) {
   console.log(props);
   return (
-    <div className="user" style={{ border: '2px solid red', margin: '20px' }}>
+    <div className="user" style={{ border: '2px solid black', backgroundColor: "lightblue", margin: '20px' }}>
       <div>
 
         <h3>Name: {props.name}</h3>
